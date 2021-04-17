@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+  api-db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_USERNAME: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - default
+  api:
+    build: api
+    ports:
+      - "3000:3000"
+      - "49153:49153"
+    networks:
+      - default
+    depends_on:
+      - api-db
+
+networks:
+  default:

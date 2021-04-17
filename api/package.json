@@ -1,0 +1,38 @@
+{
+  "name": "minimal.ps",
+  "version": "0.0.1",
+  "description": "Minimal boilerplate for use Postgres, Sequelize and Docker all together",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "rm -rf dist && webpack --mode development && node ./dist/index.js"
+  },
+  "keywords": [
+    "minimal",
+    "postgres",
+    "sequelize",
+    "docker",
+    "nodejs"
+  ],
+  "author": "Ignacio Brasca",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.13.10",
+    "babel-preset-env": "^1.7.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.13.15",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "dotenv-webpack": "^7.0.2",
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-node-externals": "^2.5.2"
+  }
+}
